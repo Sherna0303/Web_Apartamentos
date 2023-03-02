@@ -1,0 +1,769 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+}
+/*Cabezera*/
+header {
+    max-width: 1200px;
+    height: 60px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 80px;
+    padding-top: 40px;
+    margin: auto;
+    
+}
+
+
+
+/*Barra buscar*/
+.container_barra {
+    position: fixed;
+    top: 0px;
+    height: 55%;
+    width: 100%;
+    z-index: 3;
+    background: white;
+}
+
+/*Esconder barra buscar*/
+.container_barra{
+    display:none;
+}
+
+/*Salir de barra buscar*/
+#salir_barra {
+    display:none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background:rgba(0, 0, 0, 0.30); 
+}
+
+/*Container de botones en barra: Lugar, Gente, Buscar*/
+.container_barra_buscar {
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(133, 133, 133, 0.3);
+    margin: 5% 5% 0% 5%;
+}
+
+/*Botones*/
+.container_barra_buscar button {
+    background: #ffffff;
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.container_barra_buscar ul {
+    list-style: none;
+    display: flex;
+}
+
+/*Organizarlos en un container de manera uniforme*/
+.container_barra_buscar ul li {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+/*Boton lugar en barra*/
+#btn_lugar_barra {
+    border-radius: 14px 0 0 14px;
+    border: none;
+}
+
+/*Boton gente en barra*/
+#btn_gente_barra {
+    border: #a7a7a7;
+    border-style: solid;
+    border-width: thin;
+    border-bottom: none;
+    border-top: none;
+}
+
+/*Boton buscar en barra*/
+#btn_buscar_barra {
+    border-radius: 0 14px 14px 0;
+    border: none;
+    cursor: pointer;
+}
+
+/*Texto en boton lugar y gente*/
+#btn_lugar_barra, #btn_gente_barra {
+    text-align: left;
+    padding: 10px 0 10px 20px;
+}
+
+/*Titulo en boton lugar y gente*/
+#btn_lugar_barra h1, #btn_gente_barra h1 {
+    font-size: 8px;
+}
+
+/*Parrafo en boton lugar y gente*/
+#btn_lugar_barra p, #btn_gente_barra p {
+    padding-top: 4px;
+    font-size: 12px;
+    color: #a7a7a7;
+}
+
+/*Recuadro de buscar*/
+.search {
+    display: inline-flex;
+    background: #ec5c5c;
+    padding: 10px 20px 10px 20px;
+    border-radius: 16px;
+    color: white;
+    align-items: center;
+}
+
+/*Icono buscar*/
+.search span {
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+/*Texto buscar*/
+.search p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*Hover de test*/
+#btn_lugar_barra:hover, #btn_gente_barra:hover {
+    border: black;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 12px;
+}
+
+/*Lugares*/
+.lugares {
+    display:block;
+    background: transparent;
+    margin-left: 7%;
+}
+
+.lugares ul {
+    list-style: none;
+    display: table-row;
+}
+
+.lugares ul li {
+    display: flex;
+    margin: 30px 0 10px 0;
+    align-items: center;
+}
+
+.lugares ul li span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.lugares ul li p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 6px;
+}
+
+/*Guests*/
+.gente {
+    display:block;
+    position: absolute;
+    max-width: 350px;
+    top: 35%;
+    right: 55%;
+    left: 37%;
+}
+
+/*Adultos*/
+.adults {
+    margin-top: 16px;
+    display: block;
+}
+
+.adults h1 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.adults p {
+    font-size: 11px;
+    margin-left: 1px;
+    color: #a7a7a7;
+}
+
+/*Botones agregar o quitar*/
+.cantidad_adults {
+    margin-top: 10px;
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.cantidad_adults button {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-color: #797979;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.cantidad_adults button span {
+    color: #797979;
+    margin: 2px;
+    font-size: 14px;
+}
+
+.cantidad_adults h2 {
+    font-size: 14px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+/*Niños*/
+.children {
+    margin-top: 50px;
+    display: block;
+}
+
+.children h1 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.children p {
+    font-size: 11px;
+    margin-left: 1px;
+    color: #a7a7a7;
+}
+
+/*Botones agregar o quitar*/
+.cantidad_childrens {
+    margin-top: 10px;
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.cantidad_childrens button {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-color: #797979;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.cantidad_childrens button span {
+    color: #797979;
+    margin: 2px;
+    font-size: 14px;
+}
+
+.cantidad_childrens h2 {
+    font-size: 14px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+/*Logo*/
+.logo {
+    position: absolute;
+    cursor: pointer;
+}
+
+/*Boton: Lugar, Gente, Buscar*/
+.container_buscar {
+    position: absolute;
+    right: 80px;
+}
+
+.container_buscar button {
+    height: 55px;
+    font-size: 14px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container_buscar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+/*Boton lugar*/
+#btn_lugar {
+    width: 150px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 14px 0 0 14px;
+    cursor: pointer;
+    transition: background 100ms;
+    font-weight:500;
+}
+
+/*Boton gente*/
+#btn_gente {
+    width: 120px;
+    background: white;
+    color: #a7a7a7;
+    transition: background 100ms;
+    cursor: pointer;
+}
+
+#btn_lugar, #btn_gente {
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-width: thin;
+    border-right-style: solid;
+    border-color: #dbdbdb;
+}
+
+/*Boton buscar*/
+#btn_buscar {
+    padding: 10px;
+    width: 60px;
+    background: white;
+    color: #ec5c5c;
+    border: none;
+    border-radius: 0 14px 14px 0;
+    transition: background 100ms;
+    cursor: pointer;
+}
+
+#btn_lugar:hover, #btn_gente:hover, #btn_buscar:hover {
+    background: #f7f5f5;
+}
+
+/*Main*/
+section {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*Titulo*/
+.titulo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.titulo h1 {
+    font-size: 24px;
+}
+
+.titulo p {
+    position: absolute;
+    right: 0;
+    font-weight:500;
+}
+
+/*Table*/
+main {
+    display: table;
+}
+
+/*Fila de la tabla*/
+.fila {
+    display: table-row;
+}
+
+/*Celda de la tabla*/
+section main article {
+    padding: 30px 10px 10px 10px;
+    display: table-cell;
+}
+
+/*Animaciones y efectos*/
+section main article{
+    transition: background 300ms;
+    transition: box-shadow 300ms;
+    transition: transform 500ms;
+    border-radius: 20px;
+    animation: small .5s;
+    cursor: pointer;
+}
+
+section main article:hover {
+    background: #ebebeb;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transform: scale(1.16);
+}
+
+/*Apartamento 1*/
+#ap_1 {
+    width: 380px;
+    position: relative;
+}
+
+/*Imagen*/
+#ap_1 img {
+    width: 100%;
+    height: 280px;
+    border-radius: 30px;
+}
+
+/*Info*/
+#ap_1 .detalles {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#ap_1 .detalles h1 {
+    text-align: center;
+    height: 18px;
+    width: 80px;
+    padding: 5px 0 0 0;
+    font-size: 10px;
+    border: black;
+    border: solid;
+    border-width: thin;
+    border-radius: 10px;
+}
+
+#ap_1 .detalles p {
+    font-size: 13px;
+    margin-left: 12px;
+    color: #8b8b8b;
+}
+
+#ap_1 .stars {
+    align-items: center;
+    display: flex;
+}
+
+
+#ap_1 .stars span {
+    position: absolute;
+    font-size: 20px;
+    right: 34px;
+    color: #ec5c5c;
+}
+
+#ap_1 .stars p {
+    position: absolute;
+    color: black;
+    margin: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight:500;
+}
+
+#ap_1 h2 {
+    margin: 4px 0px;
+    font-size: 14px;
+}
+
+/*Apartamento 2*/
+#ap_2 {
+    width: 380px;
+    position: relative;
+}
+
+/*Imagen*/
+#ap_2 img {
+    width: 100%;
+    height: 280px;
+    border-radius: 30px;
+}
+
+/*Info*/
+#ap_2 .detalles {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#ap_2 .detalles p {
+    font-size: 13px;
+    color: #8b8b8b;
+}
+
+#ap_2 .stars {
+    align-items: center;
+    display: flex;
+}
+
+
+#ap_2 .stars span {
+    position: absolute;
+    font-size: 20px;
+    right: 30px;
+    color: #ec5c5c;
+}
+
+#ap_2 .stars p {
+    position: absolute;
+    color: black;
+    margin: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight:500;
+}
+
+#ap_2 h2 {
+    margin: 4px 0px;
+    font-size: 14px;
+}
+
+/*Apartamento 3*/
+#ap_3 {
+    width: 380px;
+    position: relative;
+}
+
+/*Imagen*/
+#ap_3 img {
+    width: 100%;
+    height: 280px;
+    border-radius: 30px;
+}
+
+/*Info*/
+#ap_3 .detalles {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+#ap_3 .detalles p {
+    font-size: 13px;
+    color: #8b8b8b;
+}
+
+#ap_3 .stars {
+    align-items: center;
+    display: flex;
+}
+
+
+#ap_3 .stars span {
+    position: absolute;
+    font-size: 20px;
+    right: 30px;
+    color: #ec5c5c;
+}
+
+#ap_3 .stars p {
+    position: absolute;
+    color: black;
+    margin: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight:500;
+}
+
+#ap_3 h2 {
+    margin: 4px 0px;
+    font-size: 14px;
+}
+
+/*Apartamento 4*/
+#ap_4 {
+    width: 380px;
+    position: relative;
+}
+
+/*Imagen*/
+#ap_4 img {
+    width: 100%;
+    height: 280px;
+    border-radius: 30px;
+}
+
+/*Info*/
+#ap_4 .detalles {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#ap_4 .detalles h1 {
+    text-align: center;
+    height: 18px;
+    width: 80px;
+    padding: 5px 0 0 0;
+    font-size: 10px;
+    border: black;
+    border: solid;
+    border-width: thin;
+    border-radius: 10px;
+}
+
+#ap_4 .detalles p {
+    font-size: 13px;
+    margin-left: 12px;
+    color: #8b8b8b;
+}
+
+#ap_4 .stars {
+    align-items: center;
+    display: flex;
+}
+
+
+#ap_4 .stars span {
+    position: absolute;
+    font-size: 20px;
+    right: 34px;
+    color: #ec5c5c;
+}
+
+#ap_4 .stars p {
+    position: absolute;
+    color: black;
+    margin: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight:500;
+}
+
+#ap_4 h2 {
+    margin: 4px 0px;
+    font-size: 14px;
+}
+
+/*Apartamento 5*/
+#ap_5 {
+    width: 380px;
+    position: relative;
+}
+
+/*Imagen*/
+#ap_5 img {
+    width: 100%;
+    height: 280px;
+    border-radius: 30px;
+}
+
+/*Info*/
+#ap_5 .detalles {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+#ap_5 .detalles p {
+    font-size: 13px;
+    color: #8b8b8b;
+}
+
+#ap_5 .stars {
+    align-items: center;
+    display: flex;
+}
+
+
+#ap_5 .stars span {
+    position: absolute;
+    font-size: 20px;
+    right: 30px;
+    color: #ec5c5c;
+}
+
+#ap_5 .stars p {
+    position: absolute;
+    color: black;
+    margin: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight:500;
+}
+
+#ap_5 h2 {
+    margin: 4px 0px;
+    font-size: 14px;
+}
+
+/*Apartamento 6*/
+#ap_6 {
+    width: 380px;
+    position: relative;
+}
+
+/*Imagen*/
+#ap_6 img {
+    width: 100%;
+    height: 280px;
+    border-radius: 30px;
+}
+
+/*Info*/
+#ap_6 .detalles {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+#ap_6 .detalles p {
+    font-size: 13px;
+    color: #8b8b8b;
+}
+
+#ap_6 .stars {
+    align-items: center;
+    display: flex;
+}
+
+
+#ap_6 .stars span {
+    position: absolute;
+    font-size: 20px;
+    right: 30px;
+    color: #ec5c5c;
+}
+
+#ap_6 .stars p {
+    position: absolute;
+    color: black;
+    margin: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight:500;
+}
+
+#ap_6 h2 {
+    margin: 4px 0px;
+    font-size: 14px;
+}
+
+/*Pie de pagina*/
+footer {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #5e5e5e;
+}
+
+footer p a {
+    color: #181818;
+}

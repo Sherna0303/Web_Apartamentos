@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartamentos</title>
+    <!--Css-->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+
+    <!--Iconos Google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!--Font Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!--Logo-->
+            <img src="assets/img/logo.svg" alt="">
+        </div>
+
+        <!--Boton Principal-->
+        <div class="container_buscar">
+            <ul>
+                <li>
+                    <button id="btn_lugar">
+                        <p>Helsinki, Finland</p>
+                    </button>
+                </li>
+
+                <li>
+                    <button id="btn_gente">
+                        <p>Add guests</p>
+                    </button>
+                </li>
+
+                <li>
+                    <button id="btn_buscar">
+                        <!--Icono buscar-->
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Expansion del boton principal-->
+    <div class="container_barra">
+        <div class="container_barra_buscar">
+            <ul>
+                <!--Boton de lugares-->
+                <li>
+                    <button id="btn_lugar_barra">
+                        <h1>LOCATION</h1>
+                        <p>Helsinki, Finland</p>
+                    </button>
+                </li>
+
+                <!--Boton de cantidad de personas-->
+                <li>
+                    <button id="btn_gente_barra">
+                        <h1>GUESTS</h1>
+                        <p>Add guests</p>
+                    </button>
+                </li>
+
+                <!--Boton para buscar-->
+                <li>
+                    <button id="btn_buscar_barra">
+                        <div class="search">
+                            <!--Icono buscar-->
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                            <p>Search</p>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!--Lugares-->
+        <div class="lugares">
+            <ul>
+                <li>
+                    <!--Icono-->
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    <p>Helsinki, Finland</p>
+                </li>
+
+                <li>
+                    <!--Icono-->
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    <p>Turku, Finland</p>
+                </li>
+
+                <li>
+                    <!--Icono-->
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    <p>Oulu, Finland</p>
+                </li>
+
+                <li>
+                    <!--Icono-->
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    <p>Vaasa, Finland</p>
+                </li>
+            </ul>
+        </div>
+
+        <!--Panel de cantidad de personas-->
+        <div class="gente">
+            <div class="adults">
+                <h1>Adults</h1>
+                <p>Ages 13 or above</p>
+                <div class="cantidad_adults">
+                    <button id="agregar_adultos">
+                        <!--Icono menos-->
+                        <span class="material-symbols-outlined">
+                            remove
+                        </span>
+                    </button>
+
+                    <h2>0</h2>
+
+                    <button>
+                        <!--Icono mas-->
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="children">
+                <h1>Children</h1>
+                <p>Ages 2-12</p>
+                <div class="cantidad_childrens">
+                    <button>
+                        <!--Icono menos-->
+                        <span class="material-symbols-outlined">
+                            remove
+                        </span>
+                    </button>
+
+                    <h2>0</h2>
+
+                    <button>
+                        <!--Icono mas-->
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Desenfoque para salir del buscador expandido-->
+    <div class="salir_barra" id="salir_barra"></div>
+
+    <section>
+        <!--Titulo-->
+        <div class="titulo">
+            <h1>Stay in Finland</h1>
+            <p>12+ stays</p>
+        </div>
+
+        <!--Contenedores-->
+        <main>
+            <div class="fila">
+                <article id="ap_1">
+                    <img src="assets/img/Apartment_1.jpg" alt="">
+                    <div class="detalles">
+                        <h1>SUPER HOST</h1>
+                        <p>Entire a aparment. 2 beds</p>
+                        <div class="stars">
+                            <!--Icono estrella-->
+                            <span class="material-symbols-outlined">
+                                grade
+                            </span>
+                            <p>4.40</p>
+                        </div>
+                    </div>
+                    <h2>Stylist aparment in center of the city</h2>
+                </article>
+        
+                <article id="ap_2">
+                    <img src="assets/img/Apartment_2.jpg" alt="">
+                    <div class="detalles">
+                        <p>Private room</p>
+                        <div class="stars">
+                            <!--Icono estrella-->
+                            <span class="material-symbols-outlined">
+                                grade
+                            </span>
+                            <p>4.25</p>
+                        </div>
+                    </div>
+                    <h2>Cozy, peaceful and private room with...</h2>
+                </article>
+    
+                <article id="ap_3">
+                    <img src="assets/img/Apartment_3.jpg" alt="">
+                    <div class="detalles">
+                        <p>Entire a house</p>
+                        <div class="stars">
+                            <!--Icono estrella-->
+                            <span class="material-symbols-outlined">
+                                grade
+                            </span>
+                            <p>4.96</p>
+                        </div>
+                    </div>
+                    <h2>Morden House in a remote area</h2>
+                </article>
+            </div>
+
+            <div class="fila">
+                <article id="ap_4">
+                    <img src="assets/img/Apartment_4.jpg" alt="">
+                    <div class="detalles">
+                        <h1>SUPER HOST</h1>
+                        <p>Entire a aparment. 2 beds</p>
+                        <div class="stars">
+                            <!--Icono estrella-->
+                            <span class="material-symbols-outlined">
+                                grade
+                            </span>
+                            <p>4.85</p>
+                        </div>
+                    </div>
+                    <h2>Stylist room in design distric</h2>
+                </article>
+
+                <article id="ap_5">
+                    <img src="assets/img/Apartment_5.jpg" alt="">
+                    <div class="detalles">
+                        <p>Private room</p>
+                        <div class="stars">
+                            <!--Icono estrella-->
+                            <span class="material-symbols-outlined">
+                                grade
+                            </span>
+                            <p>4.54</p>
+                        </div>
+                    </div>
+                    <h2>Morden Apartment close to nature</h2>
+                </article>
+
+                <article id="ap_6">
+                    <img src="assets/img/Apartment_6.jpg" alt="">
+                    <div class="detalles">
+                        <p>Entire house</p>
+                        <div class="stars">
+                            <!--Icono estrella-->
+                            <span class="material-symbols-outlined">
+                                grade
+                            </span>
+                            <p>4.64</p>
+                        </div>
+                    </div>
+                    <h2>House in a remote area</h2>
+                </article>
+                
+            </div>
+        </main>
+    </section>
+
+    <footer>
+        <p>created by <a href="#">Sebastian Hernandez Patio</a> - devChallenge.io</p>
+    </footer>
+    <!--JS-->
+    <script src="assets/js/motor.js"></script>
+</body>
+
+
+</html>
